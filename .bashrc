@@ -69,4 +69,9 @@ if [[ $- == *i* ]]; then
     # Fix shift by one char
     bind '"\e[1;2D":backward-char'
     bind '"\e[1;2C":forward-char'
+
+    # Copy paste text selection sorta
+    bind '"\C-@": set-mark'      # Ctrl+Space to set mark
+    bind '"\C-w": kill-region'   # Ctrl+W to cut marked region
+    bind '"\C-y": yank'          # Crtl+Y to paste
 fi
