@@ -1,0 +1,7 @@
+[alias]
+    atomic = "!f() { git add . && git commit -m \"$1\" -m \"$2\" && git push; }; f"
+    fresh = "!f() { git fetch . && git reset --hard && git clean -x -d -f; }; f"
+[push]
+    autoSetupRemote = true
+[fetch]
+    prune = true
