@@ -1,0 +1,178 @@
+{
+    "outline_panel": {
+        "indent_size": 16.0,
+        "default_width": 294.0
+    },
+    "centered_layout": {
+        "left_padding": 0.2
+    },
+    "bottom_dock_layout": "full",
+    "preview_tabs": {
+        "enabled": false,
+        "enable_preview_from_file_finder": false
+    },
+    "tab_bar": {
+        "show_nav_history_buttons": false
+    },
+    "diagnostics": {
+        "inline": {
+            "enabled": true
+        }
+    },
+    "prettier": {
+        "allowed": true
+    },
+    "inlay_hints": {
+        "show_background": true,
+        "enabled": true
+    },
+    "completion_menu_scrollbar": "always",
+    "completions": {
+        "words_min_length": 1,
+        "words": "enabled"
+    },
+    "show_whitespaces": "none",
+    "indent_guides": {
+        "line_width": 2,
+        "background_coloring": "disabled",
+        "coloring": "indent_aware"
+    },
+    "tab_size": 4,
+    "minimap": {
+        "thumb": "hover",
+        "show": "never"
+    },
+    "scrollbar": {
+        "show": "system"
+    },
+    "ui_font_family": "Berkeley Mono",
+    "ui_font_weight": 500.0,
+    "agent_ui_font_size": 15.0,
+    "minimum_contrast_for_highlights": 45.0,
+    "show_wrap_guides": true,
+    "buffer_line_height": "comfortable",
+    "buffer_font_weight": 400.0,
+    "buffer_font_family": "Berkeley Mono",
+    "auto_update": false,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "redact_private_values": true,
+    "gutter": {
+        "min_line_number_digits": 1,
+        "breakpoints": true,
+        "runnables": true
+    },
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 500
+        }
+    },
+    "search": {
+        "center_on_match": true
+    },
+    "active_pane_modifiers": {
+        "inactive_opacity": 1.0,
+        "border_size": 0.0
+    },
+    "tabs": {
+        "show_close_button": "always",
+        "show_diagnostics": "all",
+        "close_position": "left",
+        "file_icons": false,
+        "git_status": true
+    },
+    "title_bar": {
+        "show_menus": false,
+        "show_user_picture": false,
+        "show_onboarding_banner": false,
+        "show_branch_icon": true
+    },
+    "status_bar": {
+        "active_language_button": true
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "project_panel": {
+        "sort_mode": "directories_first",
+        "hide_hidden": false,
+        "indent_guides": {
+            "show": "never"
+        },
+        "indent_size": 16.0,
+        "entry_spacing": "standard",
+        "default_width": 200.0,
+        "hide_root": false
+    },
+    "terminal": {
+        "toolbar": {
+            "breadcrumbs": false
+        },
+        "font_weight": 391.0,
+        "cursor_shape": "bar",
+        "font_family": "Berkeley Mono",
+        "shell": "system"
+    },
+    "features": {
+        "edit_prediction_provider": "zed"
+    },
+    "icon_theme": {
+        "mode": "light",
+        "light": "Catppuccin Latte",
+        "dark": "Catppuccin Latte"
+    },
+    "ssh_connections": [
+        {
+            "host": "192.168.1.147",
+            "projects": []
+        }
+    ],
+
+    "ui_font_size": 14.0,
+    "buffer_font_size": 13.0,
+    "theme": {
+        "mode": "system",
+        "light": "Serendipity Morning - No Italics",
+        "dark": "Serendipity Sunset - No Italics"
+    },
+
+    "agent_servers": {
+        "OpenCode": {
+            "command": "opencode",
+            "args": ["acp"]
+        }
+    },
+    "agent": {
+        "button": true,
+        "play_sound_when_agent_done": true,
+        "default_model": {
+            "provider": "openai",
+            "model": "devstral"
+        },
+        "inline_alternatives": [
+            {
+                "provider": "openai",
+                "model": "devstral"
+            }
+        ]
+    },
+    "buffer_font_features": {
+        "calt": true,
+        "liga": true,
+        "dlig": true
+    },
+    "language_models": {
+        "openai": {
+            "api_url": "http://192.168.1.147:10000/v1",
+            "available_models": [
+                {
+                    "name": "devstral",
+                    "display_name": "devstral",
+                    "max_tokens": 32768
+                }
+            ]
+        }
+    }
+}
