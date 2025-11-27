@@ -1,4 +1,5 @@
 [alias]
+    pullall = "!f() { max=10; n=0; for dir in */; do git -C \"$dir\" pull & n=$((n+1)); [ $n -ge $max ] && { wait -n 2>/dev/null || wait; n=$((n-1)); }; done; wait; }; f"
     atomic = "!f() { git add . && git commit -m \"$1\" -m \"$2\" && git push; }; f"
     fresh = "!f() { git fetch . && git reset --hard && git clean -x -d -f; }; f"
 [push]
