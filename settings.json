@@ -1,4 +1,37 @@
 {
+    "edit_predictions": {
+        "mode": "subtle"
+    },
+    "auto_signature_help": true,
+    "show_signature_help_after_edits": true,
+    "git": {
+        "hunk_style": "unstaged_hollow",
+        "blame": {
+            "show_avatar": false
+        }
+    },
+    
+    "use_smartcase_search": true,
+    "languages": {
+        "Python": {
+            "format_on_save": "on",
+            "indent_guides": {
+                "background_coloring": "disabled"
+            }
+        },
+        "Vue.js": {
+            "formatter": "prettier",
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true
+            },
+            "format_on_save": "on"
+        }
+    },
+    "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.removeUnusedImports": true,
+        "source.fixAll.ruff": true
+    },
     "outline_panel": {
         "indent_size": 16.0,
         "default_width": 294.0
@@ -28,6 +61,7 @@
     },
     "completion_menu_scrollbar": "always",
     "completions": {
+        "lsp_insert_mode": "replace",
         "words_min_length": 1,
         "words": "enabled"
     },
@@ -125,8 +159,33 @@
     },
     "ssh_connections": [
         {
-            "host": "192.168.1.147",
-            "projects": []
+            "host": "p920",
+            "username": "ethan",
+            "port": 3952,
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/home/ethan"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/ethan/projects/vercel/./"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/ethan/work/backend"
+                    ]
+                }
+            ],
+            "port_forwards": [
+                {
+                    "local_port": 3000,
+                    "remote_port": 3000
+                }
+            ]
         }
     ],
 
@@ -135,7 +194,7 @@
     "theme": {
         "mode": "system",
         "light": "Serendipity Morning - No Italics",
-        "dark": "Serendipity Sunset - No Italics"
+        "dark": "Serendipity Morning - No Italics"
     },
 
     "agent_servers": {
@@ -145,11 +204,13 @@
         }
     },
     "agent": {
+        "always_allow_tool_actions": true,
+        "default_profile": "write",
         "button": true,
         "play_sound_when_agent_done": true,
         "default_model": {
-            "provider": "openai",
-            "model": "devstral"
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4.5"
         },
         "inline_alternatives": [
             {
