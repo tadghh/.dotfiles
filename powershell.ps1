@@ -25,3 +25,8 @@ function Invoke-SmartKill {
 }
 
 Set-Alias -Name kill -Value Invoke-SmartKill -Force
+
+Remove-Item Alias:\rm -ErrorAction SilentlyContinue
+function global:rm {
+    busybox rm @args
+}
