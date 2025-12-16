@@ -10,7 +10,7 @@
             "show_avatar": false
         }
     },
-    
+
     "use_smartcase_search": true,
     "languages": {
         "Python": {
@@ -165,19 +165,13 @@
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/ethan"
-                    ]
+                    "paths": ["/home/ethan"]
                 },
                 {
-                    "paths": [
-                        "/home/ethan/projects/vercel/./"
-                    ]
+                    "paths": ["/home/ethan/projects/vercel/./"]
                 },
                 {
-                    "paths": [
-                        "/home/ethan/work/backend"
-                    ]
+                    "paths": ["/home/ethan/work/backend"]
                 }
             ],
             "port_forwards": [
@@ -192,46 +186,43 @@
     "ui_font_size": 14.0,
     "buffer_font_size": 13.0,
     "theme": {
-        "mode": "system",
-        "light": "Serendipity Morning - No Italics",
-        "dark": "Serendipity Morning - No Italics"
+        "mode": "dark",
+        "light": "Ayu Light",
+        "dark": "Serendipity Midnight - No Italics"
     },
 
     "agent_servers": {
         "OpenCode": {
+            "type": "custom",
             "command": "opencode",
             "args": ["acp"]
         }
     },
     "agent": {
-        "always_allow_tool_actions": true,
         "default_profile": "write",
-        "button": true,
-        "play_sound_when_agent_done": true,
         "default_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4.5"
+            "provider": "openai",
+            "model": "devstral"
         },
-        "inline_alternatives": [
-            {
-                "provider": "openai",
-                "model": "devstral"
-            }
-        ]
+        "always_allow_tool_actions": true,
+        "model_parameters": []
     },
     "buffer_font_features": {
         "calt": true,
         "liga": true,
         "dlig": true
     },
+
     "language_models": {
         "openai": {
             "api_url": "http://192.168.1.147:10000/v1",
             "available_models": [
                 {
                     "name": "devstral",
-                    "display_name": "devstral",
-                    "max_tokens": 32768
+                    "display_name": "Devstral 2",
+                    "max_tokens": 39152,
+                    "max_completion_tokens": 9152,
+                    "max_output_tokens": 4096
                 }
             ]
         }
