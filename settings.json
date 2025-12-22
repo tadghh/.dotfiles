@@ -1,4 +1,8 @@
 {
+    "git_panel": {
+        "button": false
+    },
+    "unnecessary_code_fade": 0.6,
     "edit_predictions": {
         "mode": "subtle"
     },
@@ -130,15 +134,18 @@
         "button": false
     },
     "project_panel": {
+        "sticky_scroll": false,
+        "git_status": true,
+        "dock": "right",
         "sort_mode": "directories_first",
         "hide_hidden": false,
         "indent_guides": {
             "show": "never"
         },
-        "indent_size": 16.0,
+        "indent_size": 10.0,
         "entry_spacing": "standard",
         "default_width": 200.0,
-        "hide_root": false
+        "hide_root": true
     },
     "terminal": {
         "toolbar": {
@@ -150,7 +157,7 @@
         "shell": "system"
     },
     "features": {
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "codestral"
     },
     "icon_theme": {
         "mode": "light",
@@ -184,11 +191,11 @@
     ],
 
     "ui_font_size": 14.0,
-    "buffer_font_size": 13.0,
+    "buffer_font_size": 15.0,
     "theme": {
         "mode": "dark",
         "light": "Ayu Light",
-        "dark": "Serendipity Midnight - No Italics"
+        "dark": "Ayu Dark"
     },
 
     "agent_servers": {
@@ -199,10 +206,11 @@
         }
     },
     "agent": {
+        "dock": "left",
         "default_profile": "write",
         "default_model": {
-            "provider": "openai",
-            "model": "devstral"
+            "provider": "mistral",
+            "model": "devstral-medium-latest"
         },
         "always_allow_tool_actions": true,
         "model_parameters": []
