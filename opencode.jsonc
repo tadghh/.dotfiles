@@ -12,7 +12,7 @@
             "python *": "deny",
             "python3 *": "deny",
             "tofu *": "deny",
-            "terraform *": "deny"
+            "terraform *": "deny",
             "git push*": "deny",
             "git reset*": "deny",
             "git clean*": "deny",
