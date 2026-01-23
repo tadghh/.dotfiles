@@ -40,7 +40,7 @@ function global:rm {
             if ($arg -match 'r') { $recurse = $true }
             continue
         }
-        $it = Get-Item -LiteralPath $arg -Force -ErrorAction SilentlyContinue
+        $it = Get-Item -LiteralPath $arg -Force
         if ($it) { $targets += $it }
     }
     
@@ -48,16 +48,16 @@ function global:rm {
     
     foreach ($t in $targets) {
         if (-not $t.PSIsContainer -or -not $recurse) {
-            Remove-Item -LiteralPath $t.FullName -Force -ErrorAction SilentlyContinue
+            Remove-Item -LiteralPath $t.FullName -Force
             continue
         }
         
-        $children = @(Get-ChildItem -LiteralPath $t.FullName -Force -ErrorAction SilentlyContinue)
+        $children = @(Get-ChildItem -LiteralPath $t.FullName -Force)
         
         $children | ForEach-Object -ThrottleLimit $cpu -Parallel {
-            Remove-Item -LiteralPath $_.FullName -Recurse -Force -ErrorAction SilentlyContinue
+            Remove-Item -LiteralPath $_.FullName -Recurse -Force 
         } | Out-Null
         
-        Remove-Item -LiteralPath $t.FullName -Force -ErrorAction SilentlyContinue
+        Remove-Item -LiteralPath $t.FullName -Force
     }
 }
