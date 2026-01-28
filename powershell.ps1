@@ -28,37 +28,51 @@ function Invoke-SmartKill {
 Set-Alias -Name kill -Value Invoke-SmartKill -Force
 
 Remove-Item Alias:\rm -ErrorAction SilentlyContinue
-function global:rm {    
+function global:rm {
     $force = $false
     $recurse = $false
     $targets = @()
     $stopOptions = $false
-    
+
     foreach ($arg in $args) {
-        if (-not $stopOptions -and $arg -eq '--') { $stopOptions = $true; continue }
+        if (-not $stopOptions -and $arg -eq '--') {
+            $stopOptions = $true
+            continue
+        }
+
         if (-not $stopOptions -and $arg -like '-*') {
             if ($arg -match 'f') { $force = $true }
             if ($arg -match 'r') { $recurse = $true }
             continue
         }
-        $it = Get-Item -LiteralPath $arg -Force
-        if ($it) { $targets += $it }
+        
+        $fullPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($arg)
+        $it = Get-Item -LiteralPath $fullPath -Force -ErrorAction SilentlyContinue
+        
+        # If that fails, try with \\?\ prefix for reserved names
+        if (-not $it) {
+            $extendedPath = "\\?\$fullPath"
+            $it = Get-Item -LiteralPath $extendedPath -Force -ErrorAction SilentlyContinue
+        }
+        
+        if ($it) {
+            $targets += $it
+        }
     }
-    
+
     $cpu = [Environment]::ProcessorCount
-    
+
     foreach ($t in $targets) {
         if (-not $t.PSIsContainer -or -not $recurse) {
             Remove-Item -LiteralPath $t.FullName -Force
             continue
         }
-        
+
         $children = @(Get-ChildItem -LiteralPath $t.FullName -Force)
-        
         $children | ForEach-Object -ThrottleLimit $cpu -Parallel {
-            Remove-Item -LiteralPath $_.FullName -Recurse -Force 
+            Remove-Item -LiteralPath $_.FullName -Recurse -Force
         } | Out-Null
-        
+
         Remove-Item -LiteralPath $t.FullName -Force
     }
 }
