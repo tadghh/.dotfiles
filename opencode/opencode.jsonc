@@ -38,8 +38,8 @@
         "docs-mcp-server": true
     },
     "formatter": {
-        "python-formatter": {
-            "command": ["uv", "run", "ruff", "format", "$FILE"],
+		"python": {
+            "command": ["uv", "run", "ruff", "format", "--fix", "$FILE"],
             "extensions": [".py"]
         }
     },
