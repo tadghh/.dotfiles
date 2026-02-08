@@ -37,12 +37,6 @@
         "todoread": true,
         "docs-mcp-server": true
     },
-    "formatter": {
-		"python": {
-            "command": ["uv", "run", "ruff", "format", "--fix", "$FILE"],
-            "extensions": [".py"]
-        }
-    },
     "plugin": [
         "oh-my-opencode@latest",
         "opencode-antigravity-auth@beta",
