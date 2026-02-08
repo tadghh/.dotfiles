@@ -45,9 +45,9 @@
         }
     },
     "plugin": [
-        "opencode-antigravity-auth@beta",
-        "@tarquinen/opencode-dcp@latest",
         "oh-my-opencode@latest",
+        "opencode-antigravity-auth@beta",
+        "@tarquinen/opencode-dcp@latest"
     ],
     "watcher": {
         "ignore": [
