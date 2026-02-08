@@ -9,7 +9,8 @@
             "findstr*": "deny",
             "grep*": "deny",
             "rg*": "allow",
-            "python*": "deny",
+            "python *": "deny",
+            "python3 *": "deny",
             "tofu *": "deny",
             "terraform *": "deny",
             "git push*": "deny",
@@ -37,10 +38,13 @@
         "todoread": true,
         "docs-mcp-server": true
     },
+    "compaction": {
+        "prune": false
+    },
     "plugin": [
         "oh-my-opencode@latest",
         "opencode-antigravity-auth@beta",
-        "@tarquinen/opencode-dcp@latest"
+        "@tarquinen/opencode-dcp@latest",
     ],
     "watcher": {
         "ignore": [
