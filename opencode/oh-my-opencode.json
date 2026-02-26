@@ -1,7 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "google_auth": false,
-  "disabled_mcps": [
+    "disabled_mcps": [
     "context7",
     "websearch_exa",
     "grep_app"
@@ -16,28 +15,70 @@
   },
   "agents": {
     "sisyphus": {
-      "model": "google/antigravity-gemini-3-flash"
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     },
-    "librarian": {
-      "model": "google/antigravity-gemini-3-flash"
-    },
-    "Builder-Sisyphus": {
-      "model": "google/antigravity-gemini-3-flash"
-    },
-    "explore": {
-      "model": "google/antigravity-gemini-3-flash"
+    "hephaestus": {
+      "model": "opencode/gpt-5.3-codex",
+      "variant": "medium"
     },
     "oracle": {
-      "model": "google/antigravity-gemini-3-pro"
+      "model": "opencode/gpt-5.2",
+      "variant": "high"
     },
-    "frontend-ui-ux-engineer": {
-      "model": "google/antigravity-gemini-3-pro"
+    "librarian": {
+      "model": "opencode/glm-4.7-free"
     },
-    "document-writer": {
-      "model": "google/antigravity-gemini-3-flash"
+    "explore": {
+      "model": "anthropic/claude-haiku-4-5"
     },
     "multimodal-looker": {
-      "model": "google/antigravity-gemini-3-flash"
+      "model": "opencode/gemini-3-flash"
+    },
+    "prometheus": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
+    },
+    "metis": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
+    },
+    "momus": {
+      "model": "opencode/gpt-5.2",
+      "variant": "medium"
+    },
+    "atlas": {
+      "model": "opencode/kimi-k2.5-free"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "opencode/gemini-3-pro",
+      "variant": "high"
+    },
+    "ultrabrain": {
+      "model": "opencode/gpt-5.3-codex",
+      "variant": "xhigh"
+    },
+    "deep": {
+      "model": "opencode/gpt-5.3-codex",
+      "variant": "medium"
+    },
+    "artistry": {
+      "model": "opencode/gemini-3-pro",
+      "variant": "high"
+    },
+    "quick": {
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "unspecified-low": {
+      "model": "anthropic/claude-sonnet-4-5"
+    },
+    "unspecified-high": {
+      "model": "anthropic/claude-sonnet-4-5"
+    },
+    "writing": {
+      "model": "opencode/gemini-3-flash"
     }
   }
 }
