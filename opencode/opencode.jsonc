@@ -58,12 +58,11 @@
             "npm": "@ai-sdk/openai-compatible",
             "name": "llama.cpp",
             "options": {
-                "baseURL": "http://192.168.1.147:10000/v1"
+                "baseURL": "http://192.168.1.146:10000/v1"
             },
             "models": {
-                "mistralai/Devstral-Small-2-24B-Instruct-2512": {
-                    "name": "Devstral 2 Small",
-
+                "qwen": {
+                    "name": "Qwen 3.5",
                 }
             }
         },
